@@ -1,0 +1,10 @@
+Portfolio
+
+¿Que debe tener?
+Tecnologías usadas en el Portfolio
+Tecnologías por aprender
+Certificados
+Info general (Nombre, contacto, redes sociales)
+Proyectos realizados y con que tecnologías (Podemos hacer una sección donde se seleccione HTML y CSS, HTML,CSS y JS, etc)
+
+Footer con contacto (redes sociales y email/tel)

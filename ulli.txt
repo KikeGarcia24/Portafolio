@@ -1,0 +1,51 @@
+width: 90vw;
+    justify-self: center;
+    margin: 0 auto;
+
+    ul{
+        padding: 0;
+        list-style: none;
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-around;
+        border: 3px solid;
+        padding: 8px;
+        border-radius: 10px;
+
+        a:hover{
+            color: aqua;
+        }
+
+        &:hover ul{
+            color: red;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /*SUBMENU*/
+        .submenu{
+            padding-left:1rem;
+            padding-bottom: 1rem;
+            background-color: #fbfbfb;
+            box-shadow: 0px 0px 10px 0px rgba($color: #000000, $alpha: 1.0);
+            border-radius: 10px;
+            width: 8rem;
+            position: absolute;
+            top: 70px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1;
+
+            a,img{
+                width: 15px;
+                margin-right: 10px;
+                margin-top: 10px;
+            }
+        }
+    }
