@@ -34,7 +34,7 @@ header .menu .submenu {
   background-color: #fbfbfb;
   box-shadow: 0px 0px 10px 0px black;
   border-radius: 10px;
-  width: 8rem;
+  width: 7vw;
   position: absolute;
   top: 55px;
   display: none;
@@ -61,4 +61,45 @@ header .menu .submenu:hover {
 }
 header .menu .submenu li:hover {
   transform: scale(1.05);
+}
+
+main .quick-review {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 4rem;
+  width: 100%;
+}
+main .quick-review img {
+  width: 18vw;
+  margin: 0 auto;
+}
+main .quick-review .quick-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main .quick-review .quick-info button {
+  width: 15vw;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 20px;
+}
+main .quick-review .quick-info .redes img {
+  width: 2rem;
+  margin-right: 1.5rem;
+}
+main .quick-review .quick-info .redes nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+main .quick-review .quick-info .redes nav a {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin: 2rem;
+}
+main .quick-review .tecnology img {
+  width: 2vw;
 }/*# sourceMappingURL=main.css.map */
