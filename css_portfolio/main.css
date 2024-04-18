@@ -17,6 +17,7 @@ main {
 }
 main .aboutme {
   background-color: aqua;
+  border-radius: 30px;
 }
 main .rows {
   display: grid;
