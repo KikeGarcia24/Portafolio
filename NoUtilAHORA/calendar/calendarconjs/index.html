@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Calendario Stream</title>
+</head>
+<body>
+    <header class="fijo">
+        <h1>Calendario de Streams</h1>
+        <p>Estos son los horarios ideales de stream (pueden llegar a variar)</a>
+        <nav>
+            <a id="twitch" href="https://twitch.tv/thund3rvoice">Twitch</a>
+            <a id="insta" href="#">Instagram</a>
+            <a id="tiktok" href="#">Tiktok</a>
+        </nav>
+    </header>
+    <article>
+        <section>
+            <div class="infoMes">
+                <p>Streams <b id="month"></b><b id="year"></b></p>
+            </div>
+            <div class="calendar">
+                <div class="week">Domingo</div>
+                <div class="week">Lunes</div>
+                <div class="week">Martes</div>
+                <div class="week">Miercoles</div>
+                <div class="week">Jueves</div>
+                <div class="week">Viernes</div>
+                <div class="week">Sabado</div>
+            </div>
+            <div class="calendarDates" id="dates"></div>
+        </section>
+        <section class="modalcontainer1">
+            <div class="modal1 closed">
+                <button id="close">x</button>
+                <img src="./rayomaquin.jpg" alt="Horario">
+                <h2 id="twitch"><a href="https://twitch.tv/thund3rvoice">Únete al STREAM</a></h2>
+            </div>
+        </section>
+    </article>
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -9,8 +9,8 @@ body{
 
 
 header{
-    font-family: "Arimo", sans-serif;
-    font-size: 1.2rem;
+    font-family: "Jersey 25", sans-serif;
+    font-size: 1.5rem;
     background: #0F2027;
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027); 
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
@@ -19,7 +19,8 @@ header{
         justify-content: space-evenly;
         align-items: center;
         padding: 1rem 0;
-        border-bottom: 3px solid;
+        border-bottom: 2px solid #34d369;
+        border-radius: 40px;
 
         >a{
             text-decoration: none;
@@ -54,41 +55,44 @@ main{
 
         .fotoPerfil{
             width: 13vw;
-            border: 3px solid;
+            border: 2px solid #34d369;
             border-radius: 50%;
         }
 
         .container__contacts{
-            margin: 3rem;
+            margin: 2rem;
             display: flex;
             align-items: center;
             >.contacts{
-                margin: 1rem 3rem;
-                border: 3px solid;
+                
                 width: 90px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                border-radius: 50%;
 
                 >img{
-                    width: 2.5rem;
-                    margin: 30px;
+                    width: 2rem;
                 }
             }
         }
 
         .container__CV{
-            
+            margin-bottom: 1rem;
             >.linkCV{
                 margin-bottom: 1rem;
                 padding: 1rem;
-                border: 3px solid;
+                border: 1px solid #34d369;
+                background-color: #34d369b3;
                 width: 100px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 30px;
+                word-spacing: 0.4rem;
+                text-decoration: none;
+                font-family: "Arimo", sans-serif;
+                color:#ffffff;
+                font-weight: 600;
             }
         }
 
@@ -100,54 +104,48 @@ main{
             flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-        .scroll {
-            width: 60px;
-            height: 60px;
-            border: 2px solid #ffffff;
-            border-radius: 50%;
-            position: relative;
-            animation: down 1.5s infinite;
-            -webkit-animation: down 1.5s infinite;
-            &::before {
-                content: '';
-                position: absolute;
-                top: 15px;
-                left: 18px;
-                width: 18px;
-                height: 18px;
-                border-left: 2px solid #ffffff;
-                border-bottom: 2px solid #ffffff;
-                transform: rotate(-45deg);
+
+            >p{
+                font-family: "Arimo", sans-serif;
+                color: #ffffff;
             }
-            @keyframes down {
-                0% {
-                    transform: translate(0);
-                }
-                20% {
-                    transform: translateY(15px);
-                }
-                40% {
-                    transform: translate(0);
+
+            .mouse {
+                width: 40px;
+                height: 50px;
+                border: 3px solid #ffffff;
+                border-radius: 60px;
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background-color: #ffffff;
+                    border-radius: 50%;
+                    opacity: 1;
+                    animation: wheel 1.5s infinite;
+                    -webkit-animation: wheel 1.5s infinite;
                 }
             }
             
-            @-webkit-keyframes down {
-                0% {
-                    transform: translate(0);
+            @keyframes wheel {
+                to {
+                    opacity: 0;
+                    top: 30px;
                 }
-                20% {
-                    transform: translateY(15px);
-                }
-                40% {
-                    transform: translate(0);
+            }
+            
+            @-webkit-keyframes wheel {
+                to {
+                    opacity: 0;
+                    top: 60px;
                 }
             }
         }
-    }
-
-    .acercaDe{
         
     }
-
 }

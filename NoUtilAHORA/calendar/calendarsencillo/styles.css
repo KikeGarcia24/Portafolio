@@ -1,0 +1,55 @@
+html{
+    width: 100%;
+    height: 100%;
+    background: rgb(22,0,63);
+background: radial-gradient(circle, rgba(22,0,63,1) 0%, rgba(80,87,220,1) 43%, rgba(0,219,255,0.6615021008403361) 100%);
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+header nav a{
+    margin: 10rem 3rem;
+    text-decoration: none;
+}
+
+section{
+    display: flex;
+    width: 90vw;
+    height: 40vw;
+    margin: 0 0 0 0;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.calendar{
+    border-spacing:1rem;
+    text-align: center;
+    border-collapse: separate;
+    border-spacing: 1rem 0.5rem;
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+
+.blank{
+    opacity: 0;
+}
+
+th,td{
+    background: rgba(255, 255, 255, 0.25);
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(4px);
+	border-radius: 1rem;
+    border-spacing: 1rem;
+}
+
+.week,.dates{
+    height: 2rem;
+}
+
