@@ -33,6 +33,7 @@ main .rows .proyects {
 main .rows section {
   margin: 0 10px 10px 10px;
   background-color: rgb(137, 226, 226);
+  border-radius: 30px;
 }
 main .rows section:last-child {
   margin-bottom: 0;
