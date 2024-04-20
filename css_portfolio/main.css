@@ -1,3 +1,4 @@
+/*Variables de color y fuentes*/
 html {
   width: 100%;
   height: 100%;
@@ -10,30 +11,39 @@ body {
 header {
   font-family: "Jersey 25", sans-serif;
   font-size: 1.5rem;
-  background: #0F2027;
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  background: #081C15;
 }
 header nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 2px solid #34d369;
-  border-radius: 40px;
+  border-bottom: 2px solid #68edbf;
+  border-radius: 30px;
 }
 header nav > a {
   text-decoration: none;
   color: #ffffff;
 }
 
+main .titles {
+  text-align: center;
+  padding: 4rem;
+}
+main .titles p {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 2rem;
+}
 main .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #0F2027;
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  padding: 6rem 6rem 2rem 6rem;
+  background: #081C15;
+  background: linear-gradient(#081C15, #1B4332, #2D6A4F);
+  padding: 10rem;
 }
 main .home p#name {
   font-size: 1.8rem;
@@ -44,11 +54,11 @@ main .home p#name {
 main .home p#position {
   margin: 0;
   font-family: "Arimo", sans-serif;
-  color: #34d369;
+  color: #68edbf;
 }
 main .home .fotoPerfil {
   width: 13vw;
-  border: 2px solid #34d369;
+  border: 2px solid #68edbf;
   border-radius: 50%;
 }
 main .home .container__contacts {
@@ -71,8 +81,7 @@ main .home .container__CV {
 main .home .container__CV > .linkCV {
   margin-bottom: 1rem;
   padding: 1rem;
-  border: 1px solid #34d369;
-  background-color: rgba(52, 211, 105, 0.7019607843);
+  background-color: #2D6A4F;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -92,10 +101,6 @@ main .home .container {
   align-items: center;
   justify-content: center;
 }
-main .home .container > p {
-  font-family: "Arimo", sans-serif;
-  color: #ffffff;
-}
 main .home .container .mouse {
   width: 40px;
   height: 50px;
@@ -103,7 +108,7 @@ main .home .container .mouse {
   border-radius: 60px;
   position: relative;
 }
-main .home .container .mouse::before {
+main .home .container .mouse:before {
   content: "";
   width: 12px;
   height: 12px;
@@ -123,15 +128,14 @@ main .home .container .mouse::before {
     top: 30px;
   }
 }
-main .titles {
-  text-align: center;
-  margin: 4rem;
-}
-main .titles p {
-  margin: 0;
+main .home .container > p {
+  font-family: "Arimo", sans-serif;
+  color: #ffffff;
 }
 main .sobreMi {
-  margin-bottom: 10rem;
+  padding-bottom: 10rem;
+  background: #2D6A4F;
+  background: linear-gradient(#2D6A4F, #40916C, #52B788);
 }
 main .sobreMi .container__about {
   display: flex;
@@ -139,92 +143,225 @@ main .sobreMi .container__about {
   align-items: center;
   margin: 0 20rem;
 }
+main .sobreMi .container__about:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 78rem;
+  left: 483px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 45px solid #68edbf;
+}
 main .sobreMi .container__about > img {
   width: 10rem;
   padding-right: 3rem;
+  border-radius: 50%;
 }
-main .exp {
-  background: #0F2027;
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  padding-bottom: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+main .sobreMi .container__about .about__text {
+  text-align: center;
+  padding: 2rem;
+  background: #68edbf;
+  border-radius: 20px;
 }
-main .exp .container__exp {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 20rem;
+main .sobreMi .container__about .about__text #about__name {
+  margin: 0 0 1.5rem 0;
+  font-family: "Jersey 25", sans-serif;
+  font-size: 2.8rem;
 }
-main .exp .container__exp > img {
-  width: 10rem;
-  padding-left: 3rem;
+main .sobreMi .container__about .about__text #about__txt {
+  font-family: "Arimo", sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+}
+main .sobreMi .container__about .about__text #about__txt > b {
+  color: #74C69D;
 }
 main .projects {
-  padding-bottom: 10rem;
+  padding: 5rem 6rem 10rem 6rem;
+  background: #74C69D;
+  background: linear-gradient(#74C69D, #74C69D, #52B788);
 }
-main .projects .container__cards {
+main .projects .container__proyects {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin: 1rem;
 }
-main .projects .container__cards .cards {
+main .projects .container__proyects .cards {
+  padding: 2rem;
+  opacity: 0.9;
+  transition: all 0.25s ease;
+}
+main .projects .container__proyects .cards:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+main .projects .container__proyects .cards .cards__content {
+  text-align: center;
+}
+main .projects .container__proyects .cards .cards__content img {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  border-radius: 1.25rem;
+}
+main .projects .container__proyects .cards .cards__content .cards__data {
+  background-color: #68edbf;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+main .projects .container__proyects .cards .cards__content .cards__data > h3 {
+  font-family: "Jersey 25", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+main .projects .container__proyects .cards .cards__content .cards__data > p {
+  font-family: "Arimo", sans-serif;
+  margin: 2rem;
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech {
+  border: 3px solid;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+  cursor: default;
+  background: #74C69D;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  border: 1.5px solid #74C69D;
+  transition: all 0.25s ease;
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech:hover {
+  transform: scale(1.07);
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > img {
+  width: 30px;
+  margin: 0.5rem;
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > p {
+  font-family: "Arimo", sans-serif;
+  margin: 0 0.8rem 0 0;
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__button {
+  display: inline-block;
+  background-color: #2D6A4F;
+  padding: 0.75rem 1.2rem;
+  border-radius: 1rem;
+  text-decoration: none;
+}
+main .projects .container__proyects .cards .cards__content .cards__data .cards__button > img {
+  width: 25px;
+}
+main .exp {
+  padding-bottom: 10rem;
+  background: #52B788;
+  background: linear-gradient(#52B788, #74C69D, #74C69D);
+}
+main .exp .container__exp {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin: 0 20rem;
+  text-align: center;
+}
+main .exp .container__exp .curse1, main .exp .container__exp .curse2, main .exp .container__exp .work1, main .exp .container__exp .work2 {
+  margin-bottom: 2rem;
+}
+main .exp .container__exp .curse1 > img, main .exp .container__exp .curse2 > img, main .exp .container__exp .work1 > img, main .exp .container__exp .work2 > img {
+  width: 40px;
+  margin: 1rem;
+}
+main .exp .container__exp .curse1, main .exp .container__exp .curse2 {
+  margin-right: 3rem;
+}
+main .exp .container__exp .work1 {
+  grid-column: 2;
+  grid-row: 1;
+}
+main .exp .container__exp .container__CV {
+  grid-column: 1/3;
+}
+main .exp .container__exp .container__CV .linkCV {
+  padding: 1rem;
+  background-color: #726eff;
+  border-radius: 30px;
+  word-spacing: 0.4rem;
+  text-decoration: none;
+  font-family: "Arimo", sans-serif;
+  color: #ffffff;
+  font-weight: 600;
+}
+main .exp .container__exp #puesto {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+}
+main .exp .container__exp #lugar, main .exp .container__exp #duracion {
+  font-family: "Arimo", sans-serif;
+  margin-top: 1rem;
+  font-weight: 500;
 }
 main .sk {
   padding-bottom: 10rem;
+  background: #52B788;
+  background: linear-gradient(#52B788, #52B788, #40916C);
 }
-main .sk .container__skills {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+main .sk .skills__titles {
+  text-align: center;
+  padding: 2rem 0 0 0;
 }
-main .sk .container__skills .gridSkills {
-  display: flex;
-  justify-content: center;
+main .sk .skills__titles p {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Arimo", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
-main .sk .container__skills .gridSkills:last-child {
-  grid-column: 1/4;
-}
-main .contact {
-  padding-bottom: 10rem;
-}
-main .contact .container__form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-main .contact .container__form .form__aside {
+main .sk .container__skills .skills {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  margin: 1rem;
+}
+main .sk .container__skills .skills .imgSkills {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+main .sk .container__skills .skills .imgSkills #english {
+  border-radius: 50%;
+}
+main .sk .container__skills .skills .imgSkills img {
+  width: 100px;
+  margin: 1rem;
+  transition: all 0.25s ease;
+}
+main .sk .container__skills .skills .imgSkills img:hover {
+  transform: scale(1.09);
+}
+
+footer {
+  background: #40916C;
+  background: linear-gradient(#40916C, #2D6A4F, #1B4332);
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
-main .contact .container__form .form__aside img {
-  width: 1rem;
-}
-main .contact .container__form form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 20px;
-}
-main .contact .container__form form input, main .contact .container__form form textarea {
-  border-radius: 50px;
-  text-align: center;
-}
-main .contact .container__form form input[name=subject] {
-  grid-column: 1/4;
-  grid-row: 2;
-}
-main .contact .container__form form textarea[name=message] {
-  grid-column: 1/4;
-  grid-row: 3;
-}
-main .contact .container__form form input[type=submit] {
-  grid-column: 1;
-  grid-row: 4;
-  width: 10rem;
-  height: 2.5rem;
+footer > p {
+  padding: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
