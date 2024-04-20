@@ -224,20 +224,23 @@ main{
     }
     }
     .projects{
-        padding: 5rem 6rem 10rem 6rem;
+        margin: 0 auto;
+        padding: 0 10rem 10rem 10rem;
         background: #74C69D;
         background: -webkit-linear-gradient(#74C69D, #74C69D, #52B788); 
         background: linear-gradient(#74C69D, #74C69D, #52B788);
         
         .container__proyects{
             display: grid;
-            grid-template-columns: repeat(3,1fr);
-            margin: 1rem;
+            grid-template-columns: repeat(2,1fr);
         
             .cards{
-                padding: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 opacity: 0.9;
                 transition: all 0.25s ease;
+                margin-bottom: 2rem;
 
                 &:hover{
                     transform: scale(1.05);
@@ -246,6 +249,7 @@ main{
                 
                 .cards__content{
                     text-align: center;
+                    width: 80%;
         
                     img{
                         width: 100%;
@@ -438,6 +442,9 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-family: $textFont;
+    font-weight: 600;
+    font-size: 1.2rem;
 
     >p{
         padding: 1.5rem;
