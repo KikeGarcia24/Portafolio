@@ -1,7 +1,12 @@
 /*Variables de color y fuentes*/
+/*Jersey TITLES*/
+@import url("https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*Poppins TEXT*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   width: 100%;
   height: 100%;
+  background-color: #DAD7CD;
 }
 
 body {
@@ -9,21 +14,25 @@ body {
 }
 
 header {
-  font-family: "Jersey 25", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  background: #081C15;
+  font-weight: 600;
 }
 header nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 2px solid #68edbf;
+  border-bottom: 2px solid #344E41;
   border-radius: 30px;
 }
 header nav > a {
   text-decoration: none;
-  color: #ffffff;
+  color: #1B4332;
+  transition: all 0.25s ease;
+}
+header nav > a:hover {
+  transform: scale(1.03);
 }
 
 main .titles {
@@ -32,33 +41,32 @@ main .titles {
 }
 main .titles p {
   margin: 0;
-  color: #ffffff;
+  color: #1B4332;
   font-family: "Jersey 25", sans-serif;
   font-size: 2rem;
+  font-weight: 600;
 }
 main .home {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #081C15;
-  background: linear-gradient(#081C15, #1B4332, #2D6A4F);
   padding: 10rem;
 }
 main .home p#name {
   font-size: 1.8rem;
   margin: 1rem 0 0.5rem 0;
   font-family: "Jersey 25", sans-serif;
-  color: #ffffff;
+  color: #1B4332;
 }
 main .home p#position {
   margin: 0;
-  font-family: "Arimo", sans-serif;
-  color: #68edbf;
+  font-family: "Poppins", sans-serif;
+  color: #588157;
 }
 main .home .fotoPerfil {
   width: 13vw;
-  border: 2px solid #68edbf;
+  border: 2px solid #344E41;
   border-radius: 50%;
 }
 main .home .container__contacts {
@@ -81,7 +89,7 @@ main .home .container__CV {
 main .home .container__CV > .linkCV {
   margin-bottom: 1rem;
   padding: 1rem;
-  background-color: #2D6A4F;
+  background-color: #3A5A40;
   width: 100px;
   display: flex;
   justify-content: center;
@@ -89,8 +97,8 @@ main .home .container__CV > .linkCV {
   border-radius: 30px;
   word-spacing: 0.4rem;
   text-decoration: none;
-  font-family: "Arimo", sans-serif;
-  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #DAD7CD;
   font-weight: 600;
 }
 main .home .container {
@@ -104,7 +112,7 @@ main .home .container {
 main .home .container .mouse {
   width: 40px;
   height: 50px;
-  border: 3px solid #ffffff;
+  border: 3px solid #588157;
   border-radius: 60px;
   position: relative;
 }
@@ -116,7 +124,7 @@ main .home .container .mouse:before {
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ffffff;
+  background-color: #588157;
   border-radius: 50%;
   opacity: 1;
   animation: wheel 1.5s infinite;
@@ -129,13 +137,11 @@ main .home .container .mouse:before {
   }
 }
 main .home .container > p {
-  font-family: "Arimo", sans-serif;
-  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #588157;
 }
 main .sobreMi {
   padding-bottom: 10rem;
-  background: #2D6A4F;
-  background: linear-gradient(#2D6A4F, #40916C, #52B788);
 }
 main .sobreMi .container__about {
   display: flex;
@@ -153,7 +159,7 @@ main .sobreMi .container__about:after {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 45px solid #68edbf;
+  border-right: 45px solid #344E41;
 }
 main .sobreMi .container__about > img {
   width: 10rem;
@@ -163,27 +169,26 @@ main .sobreMi .container__about > img {
 main .sobreMi .container__about .about__text {
   text-align: center;
   padding: 2rem;
-  background: #68edbf;
+  background: #344E41;
   border-radius: 20px;
 }
 main .sobreMi .container__about .about__text #about__name {
   margin: 0 0 1.5rem 0;
   font-family: "Jersey 25", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.3rem;
+  color: #A3B18A;
 }
 main .sobreMi .container__about .about__text #about__txt {
-  font-family: "Arimo", sans-serif;
-  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #DAD7CD;
   font-weight: 600;
 }
 main .sobreMi .container__about .about__text #about__txt > b {
-  color: #74C69D;
+  color: #A3B18A;
 }
 main .projects {
   margin: 0 auto;
   padding: 0 10rem 10rem 10rem;
-  background: #74C69D;
-  background: linear-gradient(#74C69D, #74C69D, #52B788);
 }
 main .projects .container__proyects {
   display: grid;
@@ -210,10 +215,11 @@ main .projects .container__proyects .cards .cards__content img {
   margin: 0 auto;
   position: relative;
   z-index: 5;
+  border: 1px solid #344E41;
   border-radius: 1.25rem;
 }
 main .projects .container__proyects .cards .cards__content .cards__data {
-  background-color: #68edbf;
+  background-color: #344E41;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
   text-align: center;
@@ -225,10 +231,12 @@ main .projects .container__proyects .cards .cards__content .cards__data > h3 {
   font-family: "Jersey 25", sans-serif;
   font-size: 2rem;
   margin: 0;
+  color: #A3B18A;
 }
 main .projects .container__proyects .cards .cards__content .cards__data > p {
-  font-family: "Arimo", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 2rem;
+  color: #DAD7CD;
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
   display: grid;
@@ -242,10 +250,10 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   align-items: center;
   border-radius: 8px;
   cursor: default;
-  background: #74C69D;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  border: 1.5px solid #74C69D;
+  background: #DAD7CD;
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  border: 1.5px solid #DAD7CD;
   transition: all 0.25s ease;
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech:hover {
@@ -256,12 +264,13 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   margin: 0.5rem;
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > p {
-  font-family: "Arimo", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0 0.8rem 0 0;
+  color: #1B4332;
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__button {
   display: inline-block;
-  background-color: #2D6A4F;
+  background-color: #3A5A40;
   padding: 0.75rem 1.2rem;
   border-radius: 1rem;
   text-decoration: none;
@@ -271,8 +280,6 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
 }
 main .exp {
   padding-bottom: 10rem;
-  background: #52B788;
-  background: linear-gradient(#52B788, #74C69D, #74C69D);
 }
 main .exp .container__exp {
   display: grid;
@@ -280,6 +287,7 @@ main .exp .container__exp {
   grid-template-rows: repeat(2, 1fr);
   margin: 0 20rem;
   text-align: center;
+  color: #344E41;
 }
 main .exp .container__exp .curse1, main .exp .container__exp .curse2, main .exp .container__exp .work1, main .exp .container__exp .work2 {
   margin-bottom: 2rem;
@@ -300,12 +308,12 @@ main .exp .container__exp .container__CV {
 }
 main .exp .container__exp .container__CV .linkCV {
   padding: 1rem;
-  background-color: #726eff;
+  background-color: #3A5A40;
   border-radius: 30px;
   word-spacing: 0.4rem;
   text-decoration: none;
-  font-family: "Arimo", sans-serif;
-  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  color: #DAD7CD;
   font-weight: 600;
 }
 main .exp .container__exp #puesto {
@@ -315,14 +323,12 @@ main .exp .container__exp #puesto {
   margin: 0;
 }
 main .exp .container__exp #lugar, main .exp .container__exp #duracion {
-  font-family: "Arimo", sans-serif;
+  font-family: "Poppins", sans-serif;
   margin-top: 1rem;
   font-weight: 500;
 }
 main .sk {
   padding-bottom: 10rem;
-  background: #52B788;
-  background: linear-gradient(#52B788, #52B788, #40916C);
 }
 main .sk .skills__titles {
   text-align: center;
@@ -330,44 +336,122 @@ main .sk .skills__titles {
 }
 main .sk .skills__titles p {
   margin: 0;
-  color: #ffffff;
-  font-family: "Arimo", sans-serif;
+  color: #588157;
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
-main .sk .container__skills .skills {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-}
-main .sk .container__skills .skills .imgSkills {
-  width: 100%;
+main .sk .container__skills {
   display: flex;
   justify-content: space-evenly;
+  margin: 2.2rem;
 }
-main .sk .container__skills .skills .imgSkills #english {
-  border-radius: 50%;
+main .sk .container__skills .skill-card {
+  background-color: transparent;
+  width: 190px;
+  height: 254px;
+  perspective: 1000px;
+  font-family: "Poppins", sans-serif;
 }
-main .sk .container__skills .skills .imgSkills img {
-  width: 100px;
-  margin: 1rem;
-  transition: all 0.25s ease;
+main .sk .container__skills .skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
 }
-main .sk .container__skills .skills .imgSkills img:hover {
-  transform: scale(1.09);
+main .sk .container__skills .skill-card .skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+main .sk .container__skills .skill-card .skill-card-front {
+  background: linear-gradient(120deg, #344E41 60%, #3A5A40 88%, #588157 40%, #A3B18A 48%);
+  color: #A3B18A;
+}
+main .sk .container__skills .skill-card .skill-card-front img {
+  width: 70%;
+  margin: 0 auto;
+}
+main .sk .container__skills .skill-card .skill-card-front .title__front {
+  font-size: 1.5em;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+main .sk .container__skills .skill-card .skill-card-back {
+  background: linear-gradient(120deg, #A3B18A 30%, #588157 88%, #3A5A40 40%, #344E41 78%);
+  color: #1B4332;
+  transform: rotateY(180deg);
+  justify-content: center;
+}
+main .sk .container__skills .skill-card .skill-card-front, main .sk .container__skills .skill-card .skill-card-back {
+  box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+}
+main .sk .container__skills .skill-card .skills {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Avanzado*/
+  /*Intermedio*/
+  /*Principiante*/
+  /*Aprendiz*/
+}
+main .sk .container__skills .skill-card .skills svg {
+  width: 150px;
+  height: 150px;
+}
+main .sk .container__skills .skill-card .skills circle {
+  fill: none;
+  stroke: #344E41;
+  stroke-width: 20px;
+  stroke-dasharray: 100 100;
+  transform: rotate(-90deg);
+  transform-origin: 50%;
+}
+main .sk .container__skills .skill-card .skills .skills__circle {
+  stroke: #DAD7CD;
+}
+main .sk .container__skills .skill-card .skills .advanced {
+  stroke-dasharray: 75 100;
+}
+main .sk .container__skills .skill-card .skills .intermediate {
+  stroke-dasharray: 50 100;
+}
+main .sk .container__skills .skill-card .skills .beginner {
+  stroke-dasharray: 25 100;
+}
+main .sk .container__skills .skill-card .skills .novice {
+  stroke-dasharray: 0 100;
+}
+main .sk .container__skills .skill-card .skills span {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  right: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
-  background: #40916C;
-  background: linear-gradient(#40916C, #2D6A4F, #1B4332);
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
+  color: #344E41;
 }
 footer > p {
   padding: 1.5rem;

@@ -1,16 +1,25 @@
 /*Variables de color y fuentes*/
 $titlesFont: "Jersey 25", sans-serif;
-$textFont:"Arimo", sans-serif;
+$textFont:"Poppins", sans-serif;
 $titlesColor: #1B4332;
-$primaryColor: #74C69D;
-$secondaryColor: #68edbf;
-$textColor: #ffffff;
-$buttonColor: #2D6A4F;
+$titlesInside: #A3B18A;
+$primaryColor: #DAD7CD;
+$secondaryColor: #344E41;
+$textColor: #588157;
+$buttonColor: #3A5A40;
+$otherTextColor: #DAD7CD;
+
+/*Jersey TITLES*/
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Poppins TEXT*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 html{
     width: 100%;
     height: 100%;
+    background-color: $primaryColor;
 }
 
 body{
@@ -19,9 +28,9 @@ body{
 
 
 header{
-    font-family: $titlesFont;
+    font-family: $textFont;
     font-size: 1.5rem;
-    background: #081C15;
+    font-weight: 600;
     nav{
         display: flex;
         justify-content: space-evenly;
@@ -32,7 +41,12 @@ header{
 
         >a{
             text-decoration: none;
-            color: $textColor;
+            color: $titlesColor;
+            transition: all .25s ease;
+
+            &:hover{
+                transform: scale(1.03);
+            }
         }
     }
     }
@@ -45,9 +59,10 @@ main{
 
         p{
             margin: 0;
-            color: $textColor;
+            color: $titlesColor;
             font-family: $titlesFont;
             font-size: 2rem;
+            font-weight: 600;
         }
     }
     .home{
@@ -55,22 +70,19 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #081C15;
-        background: -webkit-linear-gradient(#081C15, #1B4332, #2D6A4F); 
-        background: linear-gradient(#081C15, #1B4332, #2D6A4F);
         padding: 10rem;
 
         p#name{
             font-size: 1.8rem;
             margin: 1rem 0 0.5rem 0;
             font-family: $titlesFont;
-            color: $textColor;
+            color: $titlesColor;
         }
 
         p#position{
             margin: 0;
             font-family:$textFont;
-            color: $secondaryColor;
+            color: $textColor;
         }
 
         .fotoPerfil{
@@ -110,7 +122,7 @@ main{
                 word-spacing: 0.4rem;
                 text-decoration: none;
                 font-family: $textFont;
-                color:$textColor;
+                color:$otherTextColor;
                 font-weight: 600;
             }
         }
@@ -169,9 +181,6 @@ main{
     }
     .sobreMi{       
         padding-bottom: 10rem;
-        background: #2D6A4F;
-        background: -webkit-linear-gradient(#2D6A4F, #40916C, #52B788); 
-        background: linear-gradient(#2D6A4F, #40916C, #52B788);
 
         .container__about{
             display: flex;
@@ -208,16 +217,17 @@ main{
                 #about__name{
                     margin: 0 0 1.5rem 0;
                     font-family: $titlesFont;
-                    font-size: 2.8rem;
+                    font-size: 2.3rem;
+                    color: $titlesInside;
                 }
 
                 #about__txt{
                     font-family: $textFont;
-                    color: $textColor;
+                    color: $otherTextColor;
                     font-weight: 600;
 
                     >b{
-                        color: $primaryColor;
+                        color: $titlesInside;
                     }
                 }
         }
@@ -226,9 +236,6 @@ main{
     .projects{
         margin: 0 auto;
         padding: 0 10rem 10rem 10rem;
-        background: #74C69D;
-        background: -webkit-linear-gradient(#74C69D, #74C69D, #52B788); 
-        background: linear-gradient(#74C69D, #74C69D, #52B788);
         
         .container__proyects{
             display: grid;
@@ -256,6 +263,7 @@ main{
                         margin: 0 auto;
                         position: relative;
                         z-index: 5;
+                        border: 1px solid $secondaryColor;
                         border-radius: 1.25rem;
                     }
         
@@ -272,10 +280,12 @@ main{
                             font-family: $titlesFont;
                             font-size: 2rem;
                             margin: 0;
+                            color: $titlesInside;
                         }
                         >p{
                             font-family: $textFont;
                             margin: 2rem;
+                            color: $otherTextColor;
                         }
 
                         .cards__techContainer{
@@ -290,8 +300,8 @@ main{
                                 border-radius: 8px;
                                 cursor:default;
                                 background: $primaryColor;
-                                -webkit-backdrop-filter: blur(5px);
-                                backdrop-filter: blur(5px);
+                                -webkit-backdrop-filter: blur(60px);
+                                backdrop-filter: blur(60px);
                                 border: 1.5px solid $primaryColor;
                                 transition: all 0.25s ease;
 
@@ -306,6 +316,7 @@ main{
                                 >p{
                                     font-family: $textFont;
                                     margin: 0 .8rem 0 0;
+                                    color: $titlesColor;
                                 }
                             }
                         }
@@ -328,17 +339,13 @@ main{
     }
     .exp{
         padding-bottom: 10rem;
-        
-        background: #52B788;
-        background: -webkit-linear-gradient(#52B788, #74C69D, #74C69D); 
-        background: linear-gradient(#52B788, #74C69D, #74C69D);
         .container__exp{
             display: grid;
             grid-template-columns: repeat(2,1fr);
             grid-template-rows: repeat(2,1fr);
             margin: 0 20rem;
             text-align: center;
-            
+            color:$secondaryColor;
 
             .curse1,.curse2,.work1,.work2{
                 margin-bottom: 2rem;
@@ -359,12 +366,12 @@ main{
 
                 .linkCV{
                     padding: 1rem;
-                    background-color: #726eff;
+                    background-color: $buttonColor;
                     border-radius: 30px;
                     word-spacing: 0.4rem;
                     text-decoration: none;
-                    font-family: "Arimo", sans-serif;
-                    color:#ffffff;
+                    font-family: $textFont;
+                    color:$otherTextColor;
                     font-weight: 600;
                 }
             }
@@ -385,9 +392,6 @@ main{
     }
     .sk{
         padding-bottom: 10rem;
-        background: #52B788;
-        background: -webkit-linear-gradient(#52B788, #52B788, #40916C); 
-        background: linear-gradient(#52B788, #52B788, #40916C);
 
         .skills__titles{
             text-align: center;
@@ -403,31 +407,118 @@ main{
         }
 
         .container__skills{
+            display: flex;
+            justify-content: space-evenly;
+            margin:2.2rem;
+            .skill-card {
+                background-color: transparent;
+                width: 190px;
+                height: 254px;
+                perspective: 1000px;
+                font-family: $textFont;
             
-            .skills{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                margin: 1rem;
-
-                .imgSkills{
+                &:hover .skill-card-inner {
+                    transform: rotateY(180deg);
+                }
+            
+                .skill-card-inner {
+                    position: relative;
                     width: 100%;
-                    display: flex;
-                    justify-content: space-evenly;
-
-                    #english{
-                        border-radius: 50%;
-                    }
+                    height: 100%;
+                    text-align: center;
+                    transition: transform 0.8s;
+                    transform-style: preserve-3d;
+                }
+            
+                .skill-card-front {
+                    background: linear-gradient(120deg, $secondaryColor 60%, #3A5A40 88%,
+                    #588157 40%, #A3B18A 48%);
+                    color: $titlesInside;
 
                     img{
-                        width: 100px;
-                        margin: 1rem;
-                        transition: all 0.25s ease;
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+            
+                    .title__front {
+                        font-size: 1.5em;
+                        font-weight: 900;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+                    }
+                }
+            
+                .skill-card-back {
+                    background: linear-gradient(120deg, #A3B18A 30%, #588157 88%,
+                    #3A5A40 40%, #344E41 78%);
+                    color: $titlesColor;
+                    transform: rotateY(180deg);
+                    justify-content: center;
+                }
+            
+                .skill-card-front, .skill-card-back {
+                    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    border-radius: 1rem;
+                }
+            
+                .skills{
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                
+                    svg{
+                        width: 150px;
+                        height: 150px;
+                    }
+                
+                    circle{
+                        fill: none;
+                        stroke: $secondaryColor;
+                        stroke-width: 20px;
+                        stroke-dasharray: 100 100;
+                        transform: rotate(-90deg);
+                        transform-origin: 50%;
+                    }
+                    
+                    .skills__circle{
+                        stroke: $primaryColor;
+                    }
+                    /*Avanzado*/
+                    .advanced{
+                        stroke-dasharray: 75 100;
+                    }
+                    /*Intermedio*/
+                    .intermediate{
+                        stroke-dasharray: 50 100;
+                    }
+                    /*Principiante*/
+                    .beginner{
+                        stroke-dasharray: 25 100;
+                    }
+                    /*Aprendiz*/
+                    .novice{
+                        stroke-dasharray: 0 100;
+                    }
 
-                        &:hover{
-                            transform: scale(1.09);
-                        }
+                    span{
+                        position: absolute;
+                        top: 0%;
+                        left: 0%;
+                        bottom: 0%;
+                        right: 0%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
@@ -436,15 +527,13 @@ main{
 }
 
 footer{
-    background: #40916C;
-    background: -webkit-linear-gradient(#40916C, #2D6A4F, #1B4332); 
-    background: linear-gradient(#40916C, #2D6A4F, #1B4332);
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: $textFont;
     font-weight: 600;
     font-size: 1.2rem;
+    color: $secondaryColor;
 
     >p{
         padding: 1.5rem;

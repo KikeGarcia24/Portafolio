@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Jersey+25&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/code.svg">
     <link rel="stylesheet" href="./css_portfolio/main.css">
     <title>Portafolio LESG</title>
@@ -63,9 +59,9 @@
             <section class="container__proyects">
                 <div class="cards">
                     <div class="cards__content">
-                        <img src="./img/proyectTemplate.jpg" alt="proyect" id="proyect1">
+                        <img src="./img/proyect1.png" alt="proyect" id="proyect1">
                         <div class="cards__data">
-                            <h3>PROYECTO 1</h3>
+                            <h3>PORTAFOLIO</h3>
                             <div class="cards__techContainer">
                                 <div class="cards__tech">
                                     <img src="./img/html.svg" alt="html">
@@ -80,9 +76,9 @@
                                     <p>Javascript</p>
                                 </div>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni incidunt nam optio omnis debitis quia non eveniet. Doloremque ducimus, quaerat labore laborum adipisci recusandae! Nobis eveniet voluptatibus non quas eius.</p>
+                            <p>Este es mi primer Portafolio hecho con HTML, CSS (SAAS) y un poco de Javascript como ya estás dentro de él te dejo el link de github para que si así lo deseas puedas ver en detalle todo lo que dentro de la página.</p>
     
-                            <a href="#" class="cards__button"><img src="./img/github.svg" alt="githubProyects"></a>
+                            <a href="#" class="cards__button"><img src="./img/githubProyect.svg" alt="githubProyects"></a>
                         </div>
                     </div>
                 </div>
@@ -107,7 +103,7 @@
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni incidunt nam optio omnis debitis quia non eveniet. Doloremque ducimus, quaerat labore laborum adipisci recusandae! Nobis eveniet voluptatibus non quas eius.</p>
     
-                            <a href="#" class="cards__button"><img src="./img/github.svg" alt="githubProyects"></a>
+                            <a href="#" class="cards__button"><img src="./img/githubProyect.svg" alt="githubProyects"></a>
                             <a href="#" class="cards__button"><img src="./img/link.svg" alt="linkProyects"></a>
                         </div>
                     </div>
@@ -133,7 +129,7 @@
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni incidunt nam optio omnis debitis quia non eveniet. Doloremque ducimus, quaerat labore laborum adipisci recusandae! Nobis eveniet voluptatibus non quas eius.</p>
     
-                            <a href="#" class="cards__button"><img src="./img/github.svg" alt="githubProyects"></a>
+                            <a href="#" class="cards__button"><img src="./img/githubProyect.svg" alt="githubProyects"></a>
                             <a href="#" class="cards__button"><img src="./img/link.svg" alt="linkProyects"></a>
                         </div>
                     </div>
@@ -180,37 +176,218 @@
                 <p>ESTOY APRENDIENDO</p>
             </section>
             <section class="container__skills">
-                <div class="skills">
-                    <div class="imgSkills">
-                        <img src="./img/html.svg" alt="skills">
-                        <img src="./img/css.svg" alt="skills">
-                        <img src="./img/sass.svg" alt="skills">
-                        <img src="./img/js.svg" alt="skills">
-                        <img src="./img/jquery.svg" alt="skills">
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/html.svg" alt="">
+                            <p class="title__front">HTML</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="advanced skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Avanzado</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/css.svg" alt="">
+                            <p class="title__front">CSS</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="advanced skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Avanzado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/sass.svg" alt="">
+                            <p class="title__front">SAAS</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="intermediate skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/js.svg" alt="">
+                            <p class="title__front">Javascript</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="beginner skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Principiante</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/jquery.svg" alt="">
+                            <p class="title__front">jQuery</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="beginner skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Principiante</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="skills__titles">
                 <p>QUIERO APRENDER</p>
             </section>
-            <section>
-                <div class="skills">
-                    <div class="imgSkills">
-                        <img src="./img/nodejs.svg" alt="skills">
-                        <img src="./img/react.svg" alt="skills">
-                        <img src="./img/ts.svg" alt="skills">
-                        <img src="./img/jest.svg" alt="skills">
+            <section class="container__skills">
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/react.svg" alt="">
+                            <p class="title__front">REACT</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="novice skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Aprendiz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/nodejs.svg" alt="">
+                            <p class="title__front">Node JS</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="novice skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Aprendiz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/ts.svg" alt="">
+                            <p class="title__front">Typescript</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="novice skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Aprendiz</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/jest.svg" alt="">
+                            <p class="title__front">Jest</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="novice skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Aprendiz</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
             <section class="skills__titles">
                 <p>OTRAS SKILLS</p>
             </section>
-            <section>
-                <div class="skills">
-                    <div class="imgSkills">
-                        <img src="./img/english.jpg" alt="skills" id="english">
-                        <img src="./img/figma.svg" alt="skills">
-                        <img src="./img/git.svg" alt="skills">
+            <section class="container__skills">
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/english.png" alt="">
+                            <p class="title__front">Inglés</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="intermediate skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Intermedio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/figma.svg" alt="">
+                            <p class="title__front">Figma</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="beginner skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Principiante</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-card-inner">
+                        <div class="skill-card-front">
+                            <img src="./img/git.svg" alt="">
+                            <p class="title__front">Git</p>
+                        </div>
+                        <div class="skill-card-back">
+                            <div class="skills">
+                                <svg>
+                                    <circle r="65" cx="50%" cy="50%" pathlength="100"/>
+                                    <circle class="beginner skills__circle" r="65" cx="50%" cy="50%" pathlength="100"/>
+                                </svg>
+                                <span>Principiante</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
