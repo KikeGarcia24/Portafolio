@@ -258,7 +258,7 @@ main{
                     text-align: center;
                     width: 80%;
         
-                    img{
+                    >img{
                         width: 100%;
                         margin: 0 auto;
                         position: relative;
@@ -327,6 +327,11 @@ main{
                             padding: .75rem 1.2rem;
                             border-radius: 1rem;
                             text-decoration: none;
+                            transition: all .25s ease;
+
+                            &:hover{
+                                transform: scale(1.15);
+                            }
 
                             >img{
                                 width: 25px;
