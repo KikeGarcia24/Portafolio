@@ -4,19 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/code.svg">
-    <link rel="stylesheet" href="./css_portfolio/main.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./JS/app.js" defer></script>
     <title>Portafolio LESG</title>
 </head>
 <body>
     <header>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#proyectos">Proyectos</a>
-                <a href="#experiencia">Formación/Experiencia</a>
-                <a href="#skills">Skills</a>
-                <a href="mailto:lesuarez210@gmail.com">Contacto</a>
-            </nav>
+            <div class="normal__menu">
+                <nav>
+                    <a href="#">Home</a>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#proyectos">Proyectos</a>
+                    <a href="#experiencia">Formación/Experiencia</a>
+                    <a href="#skills">Skills</a>
+                    <a href="mailto:lesuarez210@gmail.com">Contacto</a>
+                </nav>
+            </div>
+            <i class="menu__icon" id="icon"><img src="./img/menu.svg" alt="menu"></i>
+            <div class="hamburguer__menu" id="menu">
+                <nav class="responsive__menu">
+                    <a href="#" id="a__hamburguer">Home</a>
+                    <a href="#sobre-mi" id="a__hamburguer">Sobre mí</a>
+                    <a href="#proyectos" id="a__hamburguer">Proyectos</a>
+                    <a href="#experiencia" id="a__hamburguer">Formación/Experiencia</a>
+                    <a href="#skills" id="a__hamburguer">Skills</a>
+                    <a href="mailto:lesuarez210@gmail.com" target="blank" id="a__hamburguer">Contacto</a>
+                </nav>
+            </div>
     </header>
     <main>
         <article>
@@ -76,7 +90,7 @@
                                     <p>Javascript</p>
                                 </div>
                             </div>
-                            <p>Este es mi primer Portafolio hecho con HTML, CSS (SAAS) y un poco de Javascript como ya estás dentro de él te dejo el link de github para que si así lo deseas puedas ver en detalle todo lo que dentro de la página.</p>
+                            <p>Este es mi primer Portafolio hecho con HTML, CSS (SAAS) y un poco de Javascript como ya estás dentro de él te dejo el link de github para que si así lo deseas puedas ver en detalle todo lo que hay dentro de la página.</p>
     
                             <a href="#" class="cards__button"><img src="./img/githubProyect.svg" alt="githubProyects"></a>
                         </div>
@@ -244,7 +258,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" id="jQuery">
                     <div class="skill-card-inner">
                         <div class="skill-card-front">
                             <img src="./img/jquery.svg" alt="">

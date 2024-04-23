@@ -1,12 +1,17 @@
 /*Variables de color y fuentes*/
-/*Jersey TITLES*/
+/*Mixin de media queries*/
+/* @mixin hover{
+    @media (hover:hover){@content}
+} */
+/*Font: Jersey TITLES*/
 @import url("https://fonts.googleapis.com/css2?family=Jersey+25&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-/*Poppins TEXT*/
+/*Font: Poppins TEXT*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   width: 100%;
   height: 100%;
   background-color: #DAD7CD;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,24 +19,75 @@ body {
 }
 
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
 }
-header nav {
+header .menu__icon {
+  display: none;
+  height: 20px;
+  background-color: #344E41;
+  padding: 1rem;
+  margin: 1rem;
+}
+header .menu__icon img {
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  header .menu__icon {
+    display: block;
+  }
+}
+header .hamburguer__menu {
+  display: none;
+  margin: 1rem;
+}
+header .hamburguer__menu .responsive__menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #344E41;
+  height: 100vh;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+header .hamburguer__menu .responsive__menu > a {
+  text-decoration: none;
+  color: #DAD7CD;
+  transition: all 0.25s ease;
+}
+header .hamburguer__menu .responsive__menu > a:hover {
+  transform: scale(1.03);
+}
+header .show {
+  display: block;
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  header .normal__menu {
+    display: none;
+  }
+}
+header .normal__menu nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem 0;
-  border-bottom: 2px solid #344E41;
-  border-radius: 30px;
-}
-header nav > a {
-  text-decoration: none;
-  color: #1B4332;
+  background-color: #344E41;
+  height: 30px;
+  border-radius: 5px;
   transition: all 0.25s ease;
 }
-header nav > a:hover {
+header .normal__menu nav > a {
+  text-decoration: none;
+  color: #DAD7CD;
+  transition: all 0.25s ease;
+}
+header .normal__menu nav > a:hover {
   transform: scale(1.03);
 }
 
@@ -51,23 +107,40 @@ main .home {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
+  padding: 5rem;
+  text-align: center;
 }
 main .home p#name {
   font-size: 1.8rem;
+  font-weight: 600;
   margin: 1rem 0 0.5rem 0;
   font-family: "Jersey 25", sans-serif;
   color: #1B4332;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .home p#name {
+    font-size: 3rem;
+  }
 }
 main .home p#position {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: #588157;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .home p#position {
+    font-size: 1.5rem;
+  }
+}
 main .home .fotoPerfil {
   width: 13vw;
   border: 2px solid #344E41;
   border-radius: 50%;
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .home .fotoPerfil {
+    width: 50vw;
+  }
 }
 main .home .container__contacts {
   margin: 2rem;
@@ -79,9 +152,13 @@ main .home .container__contacts > .contacts {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.25s ease;
 }
 main .home .container__contacts > .contacts > img {
   width: 2rem;
+}
+main .home .container__contacts > .contacts:hover {
+  transform: scale(1.2);
 }
 main .home .container__CV {
   margin-bottom: 1rem;
@@ -100,6 +177,16 @@ main .home .container__CV > .linkCV {
   font-family: "Poppins", sans-serif;
   color: #DAD7CD;
   font-weight: 600;
+  transition: all 0.25s ease;
+}
+main .home .container__CV > .linkCV:hover {
+  transform: scale(1.1);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .home .container__CV > .linkCV {
+    width: 150px;
+    font-size: 1.5rem;
+  }
 }
 main .home .container {
   width: 100%;
@@ -140,6 +227,11 @@ main .home .container > p {
   font-family: "Poppins", sans-serif;
   color: #588157;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .home .container > p {
+    font-size: 1.5rem;
+  }
+}
 main .sobreMi {
   padding-bottom: 10rem;
 }
@@ -149,11 +241,25 @@ main .sobreMi .container__about {
   align-items: center;
   margin: 0 20rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sobreMi .container__about {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .sobreMi .container__about {
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
 main .sobreMi .container__about:after {
   content: "";
   display: block;
   position: absolute;
-  top: 78rem;
+  top: 72rem;
   left: 483px;
   width: 0;
   height: 0;
@@ -161,10 +267,38 @@ main .sobreMi .container__about:after {
   border-bottom: 5px solid transparent;
   border-right: 45px solid #344E41;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sobreMi .container__about:after {
+    left: 350px;
+    top: 67rem;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 45px solid #344E41;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .sobreMi .container__about:after {
+    left: 150px;
+    top: 73.5rem;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 45px solid #344E41;
+  }
+}
 main .sobreMi .container__about > img {
   width: 10rem;
   padding-right: 3rem;
   border-radius: 50%;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sobreMi .container__about > img {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .sobreMi .container__about > img {
+    margin-bottom: 3rem;
+  }
 }
 main .sobreMi .container__about .about__text {
   text-align: center;
@@ -172,11 +306,21 @@ main .sobreMi .container__about .about__text {
   background: #344E41;
   border-radius: 20px;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sobreMi .container__about .about__text {
+    font-size: 1.5rem;
+  }
+}
 main .sobreMi .container__about .about__text #about__name {
   margin: 0 0 1.5rem 0;
   font-family: "Jersey 25", sans-serif;
   font-size: 2.3rem;
   color: #A3B18A;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sobreMi .container__about .about__text #about__name {
+    font-size: 2.8rem;
+  }
 }
 main .sobreMi .container__about .about__text #about__txt {
   font-family: "Poppins", sans-serif;
@@ -190,9 +334,29 @@ main .projects {
   margin: 0 auto;
   padding: 0 10rem 10rem 10rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects {
+    padding: 0 3rem 10rem 3rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .projects {
+    padding: 0 0 10rem 0;
+  }
+}
 main .projects .container__proyects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .projects .container__proyects {
+    grid-template-columns: 1fr;
+  }
 }
 main .projects .container__proyects .cards {
   display: flex;
@@ -233,14 +397,29 @@ main .projects .container__proyects .cards .cards__content .cards__data > h3 {
   margin: 0;
   color: #A3B18A;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects .cards .cards__content .cards__data > h3 {
+    font-size: 3rem;
+  }
+}
 main .projects .container__proyects .cards .cards__content .cards__data > p {
   font-family: "Poppins", sans-serif;
   margin: 2rem;
   color: #DAD7CD;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects .cards .cards__content .cards__data > p {
+    font-size: 1.5rem;
+  }
+}
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
+    grid-template-columns: 1fr;
+  }
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech {
   border: 3px solid;
@@ -256,6 +435,11 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   border: 1.5px solid #DAD7CD;
   transition: all 0.25s ease;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech {
+    margin: 1rem 0.5rem 0 0.5rem;
+  }
+}
 main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech:hover {
   transform: scale(1.07);
 }
@@ -267,6 +451,11 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   font-family: "Poppins", sans-serif;
   margin: 0 0.8rem 0 0;
   color: #1B4332;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > p {
+    font-size: 1.5rem;
+  }
 }
 main .projects .container__proyects .cards .cards__content .cards__data .cards__button {
   display: inline-block;
@@ -292,6 +481,17 @@ main .exp .container__exp {
   margin: 0 20rem;
   text-align: center;
   color: #344E41;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .exp .container__exp {
+    margin: 0 10rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .exp .container__exp {
+    margin: 0 auto;
+    padding: 3rem;
+  }
 }
 main .exp .container__exp .curse1, main .exp .container__exp .curse2, main .exp .container__exp .work1, main .exp .container__exp .work2 {
   margin-bottom: 2rem;
@@ -326,10 +526,25 @@ main .exp .container__exp #puesto {
   font-size: 1.5rem;
   margin: 0;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .exp .container__exp #puesto {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .exp .container__exp #puesto {
+    font-size: 1.2rem;
+  }
+}
 main .exp .container__exp #lugar, main .exp .container__exp #duracion {
   font-family: "Poppins", sans-serif;
   margin-top: 1rem;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .exp .container__exp #lugar, main .exp .container__exp #duracion {
+    font-size: 1.3rem;
+  }
 }
 main .sk {
   padding-bottom: 10rem;
@@ -350,12 +565,39 @@ main .sk .container__skills {
   justify-content: space-evenly;
   margin: 2.2rem;
 }
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .sk .container__skills {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sk .container__skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  main .sk .container__skills #jQuery {
+    grid-column: 1/3;
+  }
+}
 main .sk .container__skills .skill-card {
   background-color: transparent;
   width: 190px;
   height: 254px;
   perspective: 1000px;
   font-family: "Poppins", sans-serif;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .sk .container__skills .skill-card {
+    margin: 1.5rem;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 768px) {
+  main .sk .container__skills .skill-card {
+    margin: 1.5rem;
+  }
 }
 main .sk .container__skills .skill-card:hover .skill-card-inner {
   transform: rotateY(180deg);
@@ -452,6 +694,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 1.2rem;
