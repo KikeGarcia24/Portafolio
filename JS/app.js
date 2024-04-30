@@ -1,14 +1,11 @@
 const iconMenu = document.getElementById("icon"); //Se manda a llamar el elemento Icon
 const responsiveMenu = document.getElementById("menu"); //Se manda a llamar elemento Menu
-/* const toggleMenu = iconMenu.querySelector("img").setAttribute("src","./img/menu.svg");
-console.log(toggleMenu.includes("menu.svg")); */
 
 /*Eventos de click en menu hamburguer*/
 
 //Hace toggle a la clase show para que muestre el menu
 iconMenu.addEventListener("click", () =>{
     responsiveMenu.classList.toggle("show");
-    ;
 });
 
 iconMenu.addEventListener("click", () =>{
