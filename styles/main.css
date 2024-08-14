@@ -695,7 +695,7 @@ header .normal__menu nav {
   padding: 1rem 0;
   background-color: #344E41;
   height: 30px;
-  border-radius: 5px;
+  border-radius: 0 0 20px 20px;
   transition: all 0.25s ease;
 }
 header .normal__menu nav > a {
