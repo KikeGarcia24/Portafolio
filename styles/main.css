@@ -276,23 +276,18 @@ main .projects .container__proyects {
     grid-template-columns: 1fr;
   }
 }
-main .projects .container__proyects .cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main .projects .container__proyects .card {
+  width: 85%;
+  height: 800px;
   opacity: 0.9;
   transition: all 0.25s ease;
   margin-bottom: 2rem;
 }
-main .projects .container__proyects .cards:hover {
+main .projects .container__proyects .card:hover {
   transform: scale(1.05);
   opacity: 1;
 }
-main .projects .container__proyects .cards .cards__content {
-  text-align: center;
-  width: 80%;
-}
-main .projects .container__proyects .cards .cards__content > img {
+main .projects .container__proyects .card .card-img-top {
   width: 100%;
   margin: 0 auto;
   position: relative;
@@ -300,51 +295,33 @@ main .projects .container__proyects .cards .cards__content > img {
   border: 1px solid #344E41;
   border-radius: 1.25rem;
 }
-main .projects .container__proyects .cards .cards__content .cards__data {
+main .projects .container__proyects .card .card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #344E41;
   padding: 1.5rem 2rem;
   border-radius: 1rem;
-  text-align: center;
-  position: relative;
-  z-index: 10;
-  height: 100%;
 }
-main .projects .container__proyects .cards .cards__content .cards__data > h3 {
+main .projects .container__proyects .card .card-body .card-title {
   font-family: "Jersey 25", sans-serif;
   font-size: 2rem;
   margin: 0;
   color: #A3B18A;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  main .projects .container__proyects .cards .cards__content .cards__data > h3 {
+  main .projects .container__proyects .card .card-body .card-title {
     font-size: 3rem;
   }
 }
-main .projects .container__proyects .cards .cards__content .cards__data > p {
-  font-family: "Poppins", sans-serif;
-  margin: 2rem;
-  color: #DAD7CD;
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  main .projects .container__proyects .cards .cards__content .cards__data > p {
-    font-size: 1.5rem;
-  }
-}
-main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-@media screen and (min-width: 300px) and (max-width: 768px) {
-  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer {
-    grid-template-columns: 1fr;
-  }
-}
-main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech {
-  border: 3px solid;
-  margin: 1rem;
+main .projects .container__proyects .card .card-body .tech-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+main .projects .container__proyects .card .card-body .tech-container .tech {
+  padding-top: 5px;
+  padding-bottom: 5px;
   border-radius: 8px;
   cursor: default;
   background: #DAD7CD;
@@ -353,29 +330,33 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   border: 1.5px solid #DAD7CD;
   transition: all 0.25s ease;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech {
-    margin: 1rem 0.5rem 0 0.5rem;
-  }
-}
-main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech:hover {
+main .projects .container__proyects .card .card-body .tech-container .tech:hover {
   transform: scale(1.07);
 }
-main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > img {
+main .projects .container__proyects .card .card-body .tech-container .tech > img {
   width: 30px;
-  margin: 0.5rem;
 }
-main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > p {
+main .projects .container__proyects .card .card-body .tech-container .tech > p {
   font-family: "Poppins", sans-serif;
   margin: 0 0.8rem 0 0;
   color: #1B4332;
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  main .projects .container__proyects .cards .cards__content .cards__data .cards__techContainer .cards__tech > p {
+  main .projects .container__proyects .card .card-body .tech-container .tech > p {
     font-size: 1.5rem;
   }
 }
-main .projects .container__proyects .cards .cards__content .cards__data .cards__button {
+main .projects .container__proyects .card .card-body .card-text {
+  font-family: "Poppins", sans-serif;
+  margin: 2rem;
+  color: #DAD7CD;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  main .projects .container__proyects .card .card-body .card-text {
+    font-size: 1.5rem;
+  }
+}
+main .projects .container__proyects .card .card-body .card-buttons {
   display: inline-block;
   background-color: #3A5A40;
   padding: 0.75rem 1.2rem;
@@ -383,10 +364,10 @@ main .projects .container__proyects .cards .cards__content .cards__data .cards__
   text-decoration: none;
   transition: all 0.25s ease;
 }
-main .projects .container__proyects .cards .cards__content .cards__data .cards__button:hover {
+main .projects .container__proyects .card .card-body .card-buttons:hover {
   transform: scale(1.15);
 }
-main .projects .container__proyects .cards .cards__content .cards__data .cards__button > img {
+main .projects .container__proyects .card .card-body .card-buttons > img {
   width: 25px;
 }
 main .exp {
@@ -694,7 +675,7 @@ header .normal__menu nav {
   align-items: center;
   padding: 1rem 0;
   background-color: #344E41;
-  height: 30px;
+  height: auto;
   border-radius: 0 0 20px 20px;
   transition: all 0.25s ease;
 }

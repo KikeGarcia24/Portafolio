@@ -250,7 +250,8 @@ main{
         }
         
         .container__proyects{
-            @include grid2();
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
             @include tablets{
                 grid-template-columns: 1fr;
             }
@@ -258,8 +259,9 @@ main{
                 grid-template-columns: 1fr;
             }
         
-            .cards{
-                @include flex();
+            .card{
+                width: 85%;
+                height: 800px;
                 opacity: 0.9;
                 transition: all 0.25s ease;
                 margin-bottom: 2rem;
@@ -269,102 +271,91 @@ main{
                     opacity: 1;
                 }
                 
+                .card-img-top{
+                    width: 100%;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 5;
+                    border: 1px solid $secondaryColor;
+                    border-radius: 1.25rem;
+                }
                 
-                .cards__content{
+                .card-body{
                     text-align: center;
-                    width: 80%;
-        
-                    >img{
-                        width: 100%;
-                        margin: 0 auto;
-                        position: relative;
-                        z-index: 5;
-                        border: 1px solid $secondaryColor;
-                        border-radius: 1.25rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background-color: $secondaryColor;
+                    padding: 1.5rem 2rem;
+                    border-radius: 1rem;
+
+                    .card-title{
+                        font-family: $titlesFont;
+                        font-size: 2rem;
+                        margin: 0;
+                        color: $titlesInside;
+                        @include tablets{
+                            font-size: 3rem;
+                        }
                     }
-        
-                    .cards__data{
-                        background-color: $secondaryColor;
-                        padding: 1.5rem 2rem;
-                        border-radius: 1rem;
-                        text-align: center;
-                        position: relative;
-                        z-index: 10;
-                        height: 100%;
-                        
-                        >h3{
-                            font-family: $titlesFont;
-                            font-size: 2rem;
-                            margin: 0;
-                            color: $titlesInside;
-                            @include tablets{
-                                font-size: 3rem;
-                            }
-                        }
-                        >p{
-                            font-family: $textFont;
-                            margin: 2rem;
-                            color: $otherTextColor;
-                            @include tablets{
-                                font-size: 1.5rem;
-                            }
-                        }
 
-                        .cards__techContainer{
-                            display: grid;
-                            grid-template-columns: repeat(3,1fr);
-                            @include celulares{
-                                grid-template-columns: 1fr;
-                            }
-                            .cards__tech{
-                                border: 3px solid;
-                                margin: 1rem;
-                                @include flex();
-                                border-radius: 8px;
-                                cursor:default;
-                                background: $primaryColor;
-                                -webkit-backdrop-filter: blur(60px);
-                                backdrop-filter: blur(60px);
-                                border: 1.5px solid $primaryColor;
-                                transition: all 0.25s ease;
-                                @include tablets{
-                                    margin: 1rem .5rem 0 .5rem;
-                                }
+                    .tech-container{
 
-                                &:hover{
-                                    transform: scale(1.07);
-                                }
+                        display: flex;
+                        justify-content: center;
 
-                                >img{
-                                    width: 30px;
-                                    margin: .5rem;
-                                }
-                                >p{
-                                    font-family: $textFont;
-                                    margin: 0 .8rem 0 0;
-                                    color: $titlesColor;
-                                    @include tablets{
-                                        font-size: 1.5rem;
-                                    }
-                                }
-                            }
-                        }
-        
-                        .cards__button{
-                            display: inline-block;
-                            background-color: $buttonColor;
-                            padding: .75rem 1.2rem;
-                            border-radius: 1rem;
-                            text-decoration: none;
-                            transition: all .25s ease;
-
+                        .tech{
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            border-radius: 8px;
+                            cursor:default;
+                            background: $primaryColor;
+                            -webkit-backdrop-filter: blur(60px);
+                            backdrop-filter: blur(60px);
+                            border: 1.5px solid $primaryColor;
+                            transition: all 0.25s ease;
+    
                             &:hover{
-                                transform: scale(1.15);
+                                transform: scale(1.07);
                             }
-
+    
                             >img{
-                                width: 25px;
+                                width: 30px;
                             }
+                            >p{
+                                font-family: $textFont;
+                                margin: 0 .8rem 0 0;
+                                color: $titlesColor;
+                                @include tablets{
+                                    font-size: 1.5rem;
+                                }
+                        }
+                    }
+                    }
+
+                    .card-text{
+                        font-family: $textFont;
+                        margin: 2rem;
+                        color: $otherTextColor;
+                        @include tablets{
+                            font-size: 1.5rem;
+                        }
+                    }
+                    
+                    .card-buttons{
+                        display: inline-block;
+                        background-color: $buttonColor;
+                        padding: .75rem 1.2rem;
+                        border-radius: 1rem;
+                        text-decoration: none;
+                        transition: all .25s ease;
+
+                        &:hover{
+                            transform: scale(1.15);
+                        }
+
+                        >img{
+                            width: 25px;
                         }
                     }
                 }
