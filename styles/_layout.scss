@@ -437,145 +437,59 @@ main{
             text-align: center;
             padding: 2rem 0 0 0;
 
-        p{
-            margin: 0;
-            color: $textColor;
-            font-family: $textFont;
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
+            p{
+                margin: 0;
+                color: $textColor;
+                font-family: $textFont;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
         }
 
         .container__skills{
-            @include flexEvenly();
-            margin:2.2rem;
-            @include celulares{
-                display: grid;
-                grid-template-columns: 1fr;
-                justify-items: center;
-            }
-            @include tablets{
-                @include grid2();
-                justify-items: center;
+            margin:4.2rem;
+            display: flex;
+            align-items: center;
 
-                #jQuery{
-                    grid-column: 1/3;
+            .tech-skill{
+                padding: 0;
+                display: flex;
+                justify-content: center;
+
+                img{
+                    width: 50%;
                 }
             }
-            .skill-card {
-                background-color: transparent;
-                width: 190px;
-                height: 254px;
-                perspective: 1000px;
+
+            .progress{
+
+                .progress-bar{
+                    background-color: $secondaryColor;
+                }
+
+                .avanzado{
+                    width: 70%;
+                }
+
+                .intermedio{
+                    width: 50%;
+                }
+
+                .novato{
+                    width: 30%;
+                }
+
+                .aprendiz{
+                    width: 10%;
+                }
+            }
+
+            .tech-label{
                 font-family: $textFont;
-                @include tablets{
-                    margin: 1.5rem;
-                }
-                @include celulares{
-                    margin: 1.5rem;
-                }
-            
-                &:hover .skill-card-inner {
-                    transform: rotateY(180deg);
-                }
-            
-                .skill-card-inner {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-                    text-align: center;
-                    transition: transform 0.8s;
-                    transform-style: preserve-3d;
-                }
-            
-                .skill-card-front {
-                    background: linear-gradient(120deg, $secondaryColor 60%, #3A5A40 88%,
-                    #588157 40%, #A3B18A 48%);
-                    color: $titlesInside;
-
-                    img{
-                        width: 70%;
-                        margin: 0 auto;
-                    }
-            
-                    .title__front {
-                        font-size: 1.5em;
-                        font-weight: 900;
-                        display: flex;
-                        justify-content: center;
-                        margin: 0;
-                    }
-                }
-            
-                .skill-card-back {
-                    background: linear-gradient(120deg, #A3B18A 30%, #588157 88%,
-                    #3A5A40 40%, #344E41 78%);
-                    color: $titlesColor;
-                    transform: rotateY(180deg);
-                    justify-content: center;
-                }
-            
-                .skill-card-front, .skill-card-back {
-                    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-                    position: absolute;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    -webkit-backface-visibility: hidden;
-                    backface-visibility: hidden;
-                    border-radius: 1rem;
-                }
-            
-                .skills{
-                    position: relative;
-                    @include flex();
-                
-                    svg{
-                        width: 150px;
-                        height: 150px;
-                    }
-                
-                    circle{
-                        fill: none;
-                        stroke: $secondaryColor;
-                        stroke-width: 20px;
-                        stroke-dasharray: 100 100;
-                        transform: rotate(-90deg);
-                        transform-origin: 50%;
-                    }
-                    
-                    .skills__circle{
-                        stroke: $primaryColor;
-                    }
-                    /*Avanzado*/
-                    .advanced{
-                        stroke-dasharray: 75 100;
-                    }
-                    /*Intermedio*/
-                    .intermediate{
-                        stroke-dasharray: 50 100;
-                    }
-                    /*Principiante*/
-                    .beginner{
-                        stroke-dasharray: 25 100;
-                    }
-                    /*Aprendiz*/
-                    .novice{
-                        stroke-dasharray: 0 100;
-                    }
-
-                    span{
-                        position: absolute;
-                        top: 0%;
-                        left: 0%;
-                        bottom: 0%;
-                        right: 0%;
-                        @include flex();
-                    }
-                }
+                font-size: 1.2rem;
+                font-weight: 500;
             }
+
         }
     }
 }
